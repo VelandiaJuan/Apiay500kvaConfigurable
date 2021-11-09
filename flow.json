@@ -126,6 +126,13 @@
         "info": ""
     },
     {
+        "id": "e042ef30.3e64d8",
+        "type": "tab",
+        "label": "SDT",
+        "disabled": false,
+        "info": "altamente vergatario y confidencial"
+    },
+    {
         "id": "1ae6c379.02ea3d",
         "type": "subflow",
         "name": "VSDWrite",
@@ -2818,12 +2825,65 @@
             "6b9b8f3b91c8f042",
             "80c32167f4b6270a",
             "9af672e64137b1b6",
-            "6eaa40c6d82a43f6"
+            "6eaa40c6d82a43f6",
+            "2dff923ea9969f7b"
         ],
         "x": 1364,
         "y": 309,
-        "w": 2302,
-        "h": 282
+        "w": 2612,
+        "h": 312
+    },
+    {
+        "id": "51715f4d.3b8d1",
+        "type": "group",
+        "z": "e042ef30.3e64d8",
+        "name": "Evento Reset SDT",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "3b213659.eddff2",
+            "ab3255a6.eff84"
+        ],
+        "x": 614,
+        "y": 39,
+        "w": 232,
+        "h": 82
+    },
+    {
+        "id": "7b1cc486.a474c4",
+        "type": "group",
+        "z": "e042ef30.3e64d8",
+        "name": "EventosSDT",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "d73ada73.dd802",
+            "b060427b.8f51c",
+            "fb32a2a7.2b5c3",
+            "d48df13e.97f288"
+        ],
+        "x": 1124,
+        "y": 179,
+        "w": 232,
+        "h": 122
+    },
+    {
+        "id": "d199f555.ed8398",
+        "type": "group",
+        "z": "e042ef30.3e64d8",
+        "name": "CDTCubloc",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ba3951d8.b102a"
+        ],
+        "x": 1114,
+        "y": 89,
+        "w": 272,
+        "h": 82
     },
     {
         "id": "b079c206d161b62c",
@@ -7924,6 +7984,25 @@
                 }
             }
         }
+    },
+    {
+        "id": "d5a1f2f8.877e68",
+        "type": "ui_group",
+        "name": "Principal",
+        "tab": "2a10ed2b.6fbb82",
+        "order": 1,
+        "disp": false,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "2a10ed2b.6fbb82",
+        "type": "ui_tab",
+        "name": "Control SDT",
+        "icon": "fa-bolt",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "8c24ec8f.cf43c",
@@ -51713,12 +51792,12 @@
         "multiple": false,
         "options": [
             {
-                "label": "Activa en bajo",
+                "label": "NC",
                 "value": "NC",
                 "type": "str"
             },
             {
-                "label": "Activa en alto",
+                "label": "NO",
                 "value": "NO",
                 "type": "str"
             }
@@ -72905,11 +72984,12 @@
         "z": "7a89175c.90f6a8",
         "g": "d3d39c6a8715a3cb",
         "name": "Salidas Digitales",
-        "func": "var ES = flow.get('ES') || null;\n\n// Arreglo de Canales\nvar Data    = { \n    32:false, 33:false, 34:false, 35:false, \n    36:false, 37:false, 38:false, 39:false, \n    40:false, 41:false, 42:false, 43:false\n};\n\n// Obtener llaves del objeto Data\nvar Canal = Object.keys(Data);\n// Declaración del string con \nvar canalmsg;\n\n//Objeto con las funciones del CILA2S\nvar FuncionC2S = {\n    \"CILA2S en marcha\"          : global.get(\"IO.Functions.DO['CILA2S en marcha']\",'memoryOnly')||false,\n    \"Falla general\"             : global.get(\"IO.Functions.DO['Falla general']\",'memoryOnly') || false,\n    \"Disparo breaker módulo ESD\": global.get(\"IO.Functions.DO['Disparo breaker módulo ESD']\", 'memoryOnly') || false,\n    \"Bypass filtro de armónicos\": global.get(\"IO.Functions.DO.HF.Status\",'memoryOnly')||false,\n    \"Simulación\"                : false\n}\n\n// Llaves del vector FuncionesC2S\nvar Keys = Object.keys(FuncionC2S);\n\n// Para cada canal de salida\nfor(var i=0; i <Canal.length; i++){\n    canalmsg ='Canal'+ Canal[i];\n    // Si la configuración del canal está declarada\n    if(typeof ES.SD[canalmsg] != 'undefined'){\n        // Para cada llave del vector FuncionesC2S que coincida con la configuración del canal\n        for(var j=0; j<Keys.length; j++){\n            if(ES.SD[canalmsg].Funcion == Keys[j]){\n                // Asignar el valor contenido en el vector de funciones al canal de salida\n                Data[Canal[i]] = ES.SD[canalmsg].Tipo == \"NO\" ? FuncionC2S[Keys[j]]:!FuncionC2S[Keys[j]];\n            } \n        }\n    }\n}\n\n// Asignar variable con los valores a escribir  (Se puede eliminar al asignar directamente).\nvar values = Object.values(Data);\ncontext.set(\"Data\", values,'memoryOnly');\ncontext.set(\"Functions\", FuncionC2S, 'memoryOnly');\n// Escribir datos en el Cubloc\nmsg.payload = {\n    value: values,\n    'fc': 15,\n    'unitid': 1,\n    'address': 4096,\n    'quantity': 12\n}\n\n// Retorno del mensaje\nreturn msg;",
+        "func": "var ES = flow.get('ES') || null;\n\n// Arreglo de Canales\nvar Data    = { \n    32:false, 33:false, 34:false, 35:false, \n    36:false, 37:false, 38:false, 39:false, \n    40:false, 41:false, 42:false, 43:false\n};\n\n// Obtener llaves del objeto Data\nvar Canal = Object.keys(Data);\n// Declaración del string con \nvar canalmsg;\n\n//Objeto con las funciones del CILA2S\nvar FuncionC2S = {\n    \"CILA2S en marcha\": global.get(\"IO.Functions.DO['CILA2S en marcha']\", 'memoryOnly') || false,\n    \"Falla general\": global.get(\"IO.Functions.DO['Falla general']\", 'memoryOnly') || false,\n    \"Disparo breaker módulo ESD\": global.get(\"IO.Functions.DO['Disparo breaker módulo ESD']\", 'memoryOnly') || false,\n    \"Cierre motorizado SDT\": global.get(\"IO.Functions.DO['Cierre motorizado SDT']\", 'memoryOnly') || false,\n    \"Apertura motorizado SDT\": global.get(\"IO.Functions.DO['Apertura motorizado SDT']\", 'memoryOnly') || false,\n    \"Bypass filtro de armónicos\": global.get(\"IO.Functions.DO.HF.Status\", 'memoryOnly') || false,\n    \"Simulación\": false\n}\n\n// Llaves del vector FuncionesC2S\nvar Keys = Object.keys(FuncionC2S);\n\n// Para cada canal de salida\nfor(var i=0; i <Canal.length; i++){\n    canalmsg ='Canal'+ Canal[i];\n    // Si la configuración del canal está declarada\n    if(typeof ES.SD[canalmsg] != 'undefined'){\n        // Para cada llave del vector FuncionesC2S que coincida con la configuración del canal\n        for(var j=0; j<Keys.length; j++){\n            if(ES.SD[canalmsg].Funcion == Keys[j]){\n                // Asignar el valor contenido en el vector de funciones al canal de salida\n                Data[Canal[i]] = ES.SD[canalmsg].Tipo == \"NO\" ? FuncionC2S[Keys[j]]:!FuncionC2S[Keys[j]];\n            } \n        }\n    }\n}\n\n// Asignar variable con los valores a escribir  (Se puede eliminar al asignar directamente).\nvar values = Object.values(Data);\ncontext.set(\"Data\", values,'memoryOnly');\ncontext.set(\"Functions\", FuncionC2S, 'memoryOnly');\n// Escribir datos en el Cubloc\nmsg.payload = {\n    value: values,\n    'fc': 15,\n    'unitid': 1,\n    'address': 4096,\n    'quantity': 12\n}\n\n// Retorno del mensaje\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 2110,
         "y": 490,
         "wires": [
@@ -73226,7 +73306,7 @@
         "z": "7a89175c.90f6a8",
         "g": "d3d39c6a8715a3cb",
         "name": "enrrutamiento",
-        "func": "var outConfig = flow.get(\"ES.SD\")||0;//configuración de salidas digitales\nvar inConfig = flow.get(\"ES.ED\")||0;//configuración de entradas digitales\nvar Outbreaker = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//setaear todas las entradas como normalmente cerradas\nif ((outConfig != 0) && (inConfig!=0) ){//ejecute si la configuración existe\n\n    for (let i = 0; i < 16; i++) {//las entradas Digitales\n        // const element = array[i];\n        var query = \"Canal\" + (i + 8);//definición del canal de las entradas cubloc\n        if (typeof inConfig[query] != 'undefined') {//si esta definido el canal de entrada\n            if (((inConfig[query].Funcion) == \"Stop ESD\")||\n                ((inConfig[query].Funcion) == \"Disparo alto nivel de aceite SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo alta temperatura SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo bajo bajo nivel de aceite SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo válvula sobre-presión SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo alta temperatura filtros\") ||\n                ((inConfig[query].Funcion) == \"Disparo alta presión THP\") ||\n                ((inConfig[query].Funcion) == \"Disparo sobre-tensión SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo puerta abierta\") ||\n                ((inConfig[query].Funcion) == \"Disparo shutdown SCC\") ||\n                ((inConfig[query].Funcion) == \"Disparo baja presión en la troncal\") ||\n                ((inConfig[query].Funcion) == \"ESD Remoto\")) {\n\n                for (let j = 32; j <= 39; j++) {//salidas digitales recorrerlas\n                    if (typeof outConfig[\"Canal\" + (j)] != 'undefined') {//si esta definido el canal\n                        if (outConfig[\"Canal\" + (j)].Funcion == \"Disparo breaker módulo ESD\") {\n                            Outbreaker[i] = j-31;//el cubloc empieza desde 1\n                            context.set(\"j\", j,\"memoryOnly\");\n                            node.status({ fill: \"green\", shape: \"dot\", text: \"Configuro\" });\n\n                        }\n\n                    }\n                }\n                // cierre del motorizado SDT lógica\n            } else if (((inConfig[query].Funcion) == \"Disparo bajo bajo nivel de aceite SDT\")\n                         || ((inConfig[query].Funcion) == \"Disparo alta temperatura SDT\") ||\n                          ((inConfig[query].Funcion) == \"Disparo Valvula sobrepresión SDT\")){\n                \n                for (let j = 32; j <= 39; j++) {//salidas digitales recorrerlas\n                    if (typeof outConfig[\"Canal\" + (j)] != 'undefined') {//si esta definido el canal\n                        if (outConfig[\"Canal\" + (j)].Funcion == \"Cierre motorizado SDT\") {\n                            Outbreaker[i] = j - 31;//el cubloc empieza desde 1\n                            context.set(\"j\", j, \"memoryOnly\");\n                            node.status({ fill: \"green\", shape: \"dot\", text: \"Configuro\" });\n\n                        }\n\n                    }\n                }\n            }\n        }\n    }\n}\ncontext.set(\"outConfig\", outConfig,\"memoryOnly\");\ncontext.set(\"inConfig\", inConfig,\"memoryOnly\");\ncontext.set(\"Outbreaker\", Outbreaker,\"memoryOnly\");\nflow.set(\"Outbreaker\", Outbreaker);\n\n\n\n\nreturn msg;",
+        "func": "var outConfig = flow.get(\"ES.SD\")||0;//configuración de salidas digitales\nvar inConfig = flow.get(\"ES.ED\")||0;//configuración de entradas digitales\nvar Outbreaker = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//setaear todas las entradas como normalmente cerradas\nif ((outConfig != 0) && (inConfig!=0) ){//ejecute si la configuración existe\n\n    for (let i = 0; i < 16; i++) {//las entradas Digitales\n        // const element = array[i];\n        var query = \"Canal\" + (i + 8);//definición del canal de las entradas cubloc\n        if (typeof inConfig[query] != 'undefined') {//si esta definido el canal de entrada\n            if (((inConfig[query].Funcion) == \"Stop ESD\")||\n                ((inConfig[query].Funcion) == \"Disparo alto nivel de aceite SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo alta temperatura SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo bajo bajo nivel de aceite SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo válvula sobre-presión SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo alta temperatura filtros\") ||\n                ((inConfig[query].Funcion) == \"Disparo alta presión THP\") ||\n                ((inConfig[query].Funcion) == \"Disparo sobre-tensión SUT\") ||\n                ((inConfig[query].Funcion) == \"Disparo puerta abierta\") ||\n                ((inConfig[query].Funcion) == \"Disparo shutdown SCC\") ||\n                ((inConfig[query].Funcion) == \"Disparo baja presión en la troncal\") ||\n                ((inConfig[query].Funcion) == \"ESD Remoto\")) {\n\n                for (let j = 32; j <= 39; j++) {//salidas digitales recorrerlas\n                    if (typeof outConfig[\"Canal\" + (j)] != 'undefined') {//si esta definido el canal\n                        if (outConfig[\"Canal\" + (j)].Funcion == \"Disparo breaker módulo ESD\") {\n                            Outbreaker[i] = j-31;//el cubloc empieza desde 1\n                            context.set(\"j\", j,\"memoryOnly\");\n                            node.status({ fill: \"green\", shape: \"dot\", text: \"Configuro\" });\n\n                        }\n\n                    }\n                }\n                // cierre del motorizado SDT lógica\n            } else if (((inConfig[query].Funcion) == \"Disparo bajo bajo nivel de aceite SDT\")\n                         || ((inConfig[query].Funcion) == \"Disparo alta temperatura SDT\") ||\n                          ((inConfig[query].Funcion) == \"Disparo Valvula sobrepresión SDT\")){\n                \n                for (let j = 32; j <= 39; j++) {//salidas digitales recorrerlas\n                    if (typeof outConfig[\"Canal\" + (j)] != 'undefined') {//si esta definido el canal\n                        if (outConfig[\"Canal\" + (j)].Funcion == \"Apertura motorizado SDT\") {\n                            Outbreaker[i] = j - 31;//el cubloc empieza desde 1\n                            context.set(\"j\", j, \"memoryOnly\");\n                            node.status({ fill: \"green\", shape: \"dot\", text: \"Configuro\" });\n\n                        }\n\n                    }\n                }\n            }\n        }\n    }\n}else{\n    node.status({ fill: \"green\", shape: \"dot\", text: \"No tiene Configuración\" });\n}\ncontext.set(\"outConfig\", outConfig,\"memoryOnly\");\ncontext.set(\"inConfig\", inConfig,\"memoryOnly\");\ncontext.set(\"Outbreaker\", Outbreaker,\"memoryOnly\");\nflow.set(\"Outbreaker\", Outbreaker);\n\n\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -73236,7 +73316,8 @@
         "y": 540,
         "wires": [
             [
-                "58c4baeec0e06616"
+                "58c4baeec0e06616",
+                "2dff923ea9969f7b"
             ]
         ]
     },
@@ -73251,8 +73332,8 @@
         "server": "f630cb55.8d18e8",
         "emptyMsgOnFail": false,
         "keepMsgProperties": false,
-        "x": 3530,
-        "y": 430,
+        "x": 3840,
+        "y": 480,
         "wires": [
             [],
             []
@@ -73973,5 +74054,834 @@
         "x": 1695,
         "y": 2740,
         "wires": []
+    },
+    {
+        "id": "43d716dd.cc5838",
+        "type": "ui_template",
+        "z": "e042ef30.3e64d8",
+        "group": "d5a1f2f8.877e68",
+        "name": "Titulo",
+        "order": 1,
+        "width": 12,
+        "height": 1,
+        "format": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <!-- Required meta tags -->\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n\n    <!-- Bootstrap CSS -->\n    <link rel=\"stylesheet\" href=\"http://localhost:1880/bootstrap/dist/css/bootstrap.min.css\">\n    \n  </head>\n  <body>\n    <h4><b><center>Control de interruptor motorizado SDT</center></b></h4>\n  </body>\n</html>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 90,
+        "y": 30,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "38c9b4ce.00d65c",
+        "type": "ui_template",
+        "z": "e042ef30.3e64d8",
+        "group": "d5a1f2f8.877e68",
+        "name": "subtitulo",
+        "order": 5,
+        "width": 12,
+        "height": "1",
+        "format": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <!-- Required meta tags -->\n    <meta charset=\"utf-8\">\n  </head>\n  <body>\n    <h5><b><center>Monitoreo interruptor motorizado SDT</center></b></h5>\n  </body>\n</html>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 100,
+        "y": 70,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1b68049c.a89c03",
+        "type": "ui_button",
+        "z": "e042ef30.3e64d8",
+        "name": "OpenSDT",
+        "group": "d5a1f2f8.877e68",
+        "order": 2,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Open",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "",
+        "payload": "¿Está seguro de realizar la apertura del breaker SDT?",
+        "payloadType": "str",
+        "topic": "",
+        "x": 520,
+        "y": 220,
+        "wires": [
+            [
+                "2c081597.62fb0a"
+            ]
+        ]
+    },
+    {
+        "id": "b429d547.0e12b8",
+        "type": "ui_button",
+        "z": "e042ef30.3e64d8",
+        "name": "CloseSDT",
+        "group": "d5a1f2f8.877e68",
+        "order": 3,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Close",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "green",
+        "icon": "",
+        "payload": "¿Está seguro de realizar el cierre del breaker SDT?",
+        "payloadType": "str",
+        "topic": "",
+        "x": 530,
+        "y": 260,
+        "wires": [
+            [
+                "8865e49e.547b58"
+            ]
+        ]
+    },
+    {
+        "id": "b4933a4c.1a1d9",
+        "type": "ui_button",
+        "z": "e042ef30.3e64d8",
+        "name": "ResetSDT",
+        "group": "d5a1f2f8.877e68",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Reset",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "gray",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 530,
+        "y": 180,
+        "wires": [
+            [
+                "3dde1ad1.409ac6",
+                "4e84465e.93b118",
+                "3b213659.eddff2"
+            ]
+        ]
+    },
+    {
+        "id": "846faea7.0df4d",
+        "type": "ui_led",
+        "z": "e042ef30.3e64d8",
+        "group": "d5a1f2f8.877e68",
+        "order": 6,
+        "width": "6",
+        "height": "1",
+        "label": "Disparo bajo bajo nivel de aceite SDT",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "green",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "red",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "blue",
+                "value": "NoDefinido",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Disparo bajo bajo nivel de aceite SDT",
+        "x": 760,
+        "y": 350,
+        "wires": []
+    },
+    {
+        "id": "6686b430.59456c",
+        "type": "ui_led",
+        "z": "e042ef30.3e64d8",
+        "group": "d5a1f2f8.877e68",
+        "order": 7,
+        "width": "6",
+        "height": "1",
+        "label": "Disparo Valvula sobrepresión SDT",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "green",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "red",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "blue",
+                "value": "NoDefinido",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Disparo Valvula sobrepresión SDT",
+        "x": 630,
+        "y": 390,
+        "wires": []
+    },
+    {
+        "id": "9a7a1951.456bb8",
+        "type": "ui_led",
+        "z": "e042ef30.3e64d8",
+        "group": "d5a1f2f8.877e68",
+        "order": 8,
+        "width": "6",
+        "height": "1",
+        "label": "Disparo alta temperatura SDT",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "green",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "red",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "blue",
+                "value": "NoDefinido",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Disparo alta temperatura SDT",
+        "x": 620,
+        "y": 430,
+        "wires": []
+    },
+    {
+        "id": "750a8d14.77b1d4",
+        "type": "ui_led",
+        "z": "e042ef30.3e64d8",
+        "group": "d5a1f2f8.877e68",
+        "order": 9,
+        "width": "6",
+        "height": "1",
+        "label": "Motorizado SDT",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "green",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "red",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "yellow",
+                "value": "Estado falla",
+                "valueType": "str"
+            },
+            {
+                "color": "blue",
+                "value": "NoDefinido",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "Motorizado SDT cerrado",
+        "x": 600,
+        "y": 470,
+        "wires": []
+    },
+    {
+        "id": "f964c796.db35a8",
+        "type": "comment",
+        "z": "e042ef30.3e64d8",
+        "name": "Funcionalidades botones de control SDT",
+        "info": "",
+        "x": 180,
+        "y": 170,
+        "wires": []
+    },
+    {
+        "id": "445902b8.c3c09c",
+        "type": "switch",
+        "z": "e042ef30.3e64d8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Aceptar",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 220,
+        "wires": [
+            [
+                "b071c8f2.e159d8"
+            ]
+        ]
+    },
+    {
+        "id": "b85078df.251d98",
+        "type": "switch",
+        "z": "e042ef30.3e64d8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Aceptar",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 260,
+        "wires": [
+            [
+                "fe53e352.15a038"
+            ]
+        ]
+    },
+    {
+        "id": "49905464.a8ba7c",
+        "type": "comment",
+        "z": "e042ef30.3e64d8",
+        "name": "Acciones control SDT",
+        "info": "",
+        "x": 330,
+        "y": 310,
+        "wires": []
+    },
+    {
+        "id": "2c081597.62fb0a",
+        "type": "ui_toast",
+        "z": "e042ef30.3e64d8",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Aceptar",
+        "cancel": "Cancelar",
+        "raw": false,
+        "topic": "Apertura motorizado SDT",
+        "name": "",
+        "x": 690,
+        "y": 220,
+        "wires": [
+            [
+                "445902b8.c3c09c"
+            ]
+        ]
+    },
+    {
+        "id": "8865e49e.547b58",
+        "type": "ui_toast",
+        "z": "e042ef30.3e64d8",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "Aceptar",
+        "cancel": "Cancelar",
+        "raw": false,
+        "topic": "Cierre motorizado SDT",
+        "name": "",
+        "x": 690,
+        "y": 260,
+        "wires": [
+            [
+                "b85078df.251d98"
+            ]
+        ]
+    },
+    {
+        "id": "a2773def.c51f3",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "name": "showDisparoValvulaSDT",
+        "func": "var IOdata = global.get(\"IO\",\"memoryOnly\")||0;\nvar data = Object.values(IOdata.Functions.DI);\nvar tipoEntrada =  Object.keys(IOdata.Functions.DI);\nif(data.length>0){\n    for (var i = 0; i < data.length; i++) {\n        if(tipoEntrada[i] == \"Disparo Valvula sobrepresión SDT\"){\n            msg.payload = data[i];\n            //terminar secuencia for\n            flow.set(\"ValvulaSobrepresionSDT\",data[i],\"memoryOnly\");\n            break;\n        }else{\n            msg.payload = \"NoDefinido\";\n        }\n    }\n}else{\n    msg.payload = \"NoDefinido\";\n}\n//variables contexto para visualizar las variables\ncontext.set(\"IOdata\",IOdata,\"memoryOnly\");\ncontext.set(\"data\",data,\"memoryOnly\");\ncontext.set(\"tipoEntrada\",tipoEntrada,\"memoryOnly\");\ncontext.set(\"tamañoVector\", data.length,\"memoryOnly\");\ncontext.set(\"mensaje\", msg.payload,\"memoryOnly\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 390,
+        "wires": [
+            [
+                "6686b430.59456c"
+            ]
+        ]
+    },
+    {
+        "id": "c1c6df03.7af0a",
+        "type": "inject",
+        "z": "e042ef30.3e64d8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 90,
+        "y": 350,
+        "wires": [
+            [
+                "a2773def.c51f3",
+                "c09e3b03.14e8e8",
+                "440bc139.2af13",
+                "ffa15e57.85925",
+                "90f1ad72.499898",
+                "ab7dfbc9.c064f"
+            ]
+        ]
+    },
+    {
+        "id": "c09e3b03.14e8e8",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "name": "showAltatemperaturaSDT",
+        "func": "var IOdata = global.get(\"IO\",\"memoryOnly\")||0;\nvar data = Object.values(IOdata.Functions.DI);\nvar tipoEntrada =  Object.keys(IOdata.Functions.DI);\nif(data.length>0){\n    for (var i = 0; i < data.length; i++) {\n        if(tipoEntrada[i] == \"Disparo alta temperatura SDT\"){\n            msg.payload = data[i];\n            //terminar secuencia for\n            flow.set(\"DisparoAltaTemperaturaSDT\",data[i],\"memoryOnly\");\n            break;\n        }else{\n            msg.payload = \"NoDefinido\";\n        }\n    }\n}else{\n    msg.payload = \"NoDefinido\";\n}\n//variables contexto para visualizar las variables\ncontext.set(\"IOdata\",IOdata,\"memoryOnly\");\ncontext.set(\"data\",data,\"memoryOnly\");\ncontext.set(\"tipoEntrada\",tipoEntrada,\"memoryOnly\");\ncontext.set(\"tamañoVector\", data.length,\"memoryOnly\");\ncontext.set(\"mensaje\", msg.payload,\"memoryOnly\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 430,
+        "wires": [
+            [
+                "9a7a1951.456bb8"
+            ]
+        ]
+    },
+    {
+        "id": "440bc139.2af13",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "name": "showDisparo bajo bajo nivel de aceite SDT",
+        "func": "var IOdata = global.get(\"IO\",\"memoryOnly\")||0;\nvar data = Object.values(IOdata.Functions.DI);\nvar tipoEntrada =  Object.keys(IOdata.Functions.DI);\nif(data.length>0){\n    for (var i = 0; i < data.length; i++) {\n        if(tipoEntrada[i] == \"Disparo bajo bajo nivel de aceite SDT\"){\n            msg.payload = data[i];\n            //terminar secuencia for\n            flow.set(\"bajoNivelAceiteSDT\",data[i],\"memoryOnly\");\n            break;\n        }else{\n            msg.payload = \"NoDefinido\";\n        }\n    }\n}else{\n    msg.payload = \"NoDefinido\";\n}\n//variables contexto para visualizar las variables\ncontext.set(\"IOdata\",IOdata,\"memoryOnly\");\ncontext.set(\"data\",data,\"memoryOnly\");\ncontext.set(\"tipoEntrada\",tipoEntrada,\"memoryOnly\");\ncontext.set(\"tamañoVector\", data.length,\"memoryOnly\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 400,
+        "y": 350,
+        "wires": [
+            [
+                "846faea7.0df4d"
+            ]
+        ]
+    },
+    {
+        "id": "ffa15e57.85925",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "name": "showEstadoMotorizado",
+        "func": "var IOdata = global.get(\"IO\",\"memoryOnly\")||0;\nvar ValvulaSobrepresionSDT = flow.get(\"ValvulaSobrepresionSDT\",\"memoryOnly\")||0;\nvar bajoNivelAceiteSDT = flow.get(\"bajoNivelAceiteSDT\",\"memoryOnly\")||0;\nvar DisparoAltaTemperaturaSDT = flow.get(\"DisparoAltaTemperaturaSDT\",\"memoryOnly\")||0;\nvar flagfallaSDT = flow.get(\"flagfallaSDT\")||0;\nvar data = Object.values(IOdata.Functions.DI);\nvar tipoEntrada =  Object.keys(IOdata.Functions.DI);\nif(flagfallaSDT == true){\n    msg.payload = \"Estado falla\";\n}else{\n    if(data.length>0){\n        for (var i = 0; i < data.length; i++) {\n            if((ValvulaSobrepresionSDT == true) || (bajoNivelAceiteSDT == true) || (DisparoAltaTemperaturaSDT == true)){\n                //true o false de entrada digital\n                msg.payload = \"Estado falla\";\n                break;\n            }else if (tipoEntrada[i] == \"Estado motorizado SDT\"){\n                msg.payload = data[i];\n                break;\n            }\n            else{\n                //msg.payload = \"NoDefinido\";\n            }\n        }\n    }\n    else{\n        msg.payload = \"NoDefinido\";\n    }\n}\n//variables de flujo a utilizar\nflow.set(\"estadoMotorizado\",msg.payload,\"memoryOnly\");\n\n\n//variables contexto para visualizar las variables\ncontext.set(\"IOdata\",IOdata,\"memoryOnly\");\ncontext.set(\"data\",data,\"memoryOnly\");\ncontext.set(\"tipoEntrada\",tipoEntrada,\"memoryOnly\");\ncontext.set(\"tamañoVector\", data.length,\"memoryOnly\");\ncontext.set(\"mensaje\", msg.payload,\"memoryOnly\");\ncontext.set(\"ValvulaSobrepresionSDT\", ValvulaSobrepresionSDT,\"memoryOnly\");\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 340,
+        "y": 470,
+        "wires": [
+            [
+                "750a8d14.77b1d4",
+                "1364fb20.90b51d"
+            ]
+        ]
+    },
+    {
+        "id": "90f1ad72.499898",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "name": "habilitarBotonesSDT",
+        "func": "var estadoMotorizado = flow.get(\"estadoMotorizado\",\"memoryOnly\")||0;\nvar estadoMotorizado = flow.get(\"estadoMotorizado\",\"memoryOnly\")||0;\nvar CloseSDT = flow.get(\"CloseSDT\",\"memoryOnly\")||0;\nif(estadoMotorizado != \"Estado falla\"&&CloseSDT == true){\n    msg.enabled = true;\n}else{\n    msg.enabled = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 220,
+        "wires": [
+            [
+                "1b68049c.a89c03"
+            ]
+        ]
+    },
+    {
+        "id": "b071c8f2.e159d8",
+        "type": "change",
+        "z": "e042ef30.3e64d8",
+        "name": "saveButtonSDT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::OpenSDT",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::CloseSDT",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 220,
+        "wires": [
+            [
+                "ba3951d8.b102a",
+                "d73ada73.dd802"
+            ]
+        ]
+    },
+    {
+        "id": "fe53e352.15a038",
+        "type": "change",
+        "z": "e042ef30.3e64d8",
+        "name": "saveButtonSDT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::OpenSDT",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::CloseSDT",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 260,
+        "wires": [
+            [
+                "ba3951d8.b102a",
+                "fb32a2a7.2b5c3"
+            ]
+        ]
+    },
+    {
+        "id": "ab7dfbc9.c064f",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "name": "habilitarBotonesSDT",
+        "func": "var estadoMotorizado = flow.get(\"estadoMotorizado\",\"memoryOnly\")||0;\nvar OpenSDT = flow.get(\"OpenSDT\",\"memoryOnly\")||0;\nif(estadoMotorizado != \"Estado falla\"&&OpenSDT == true){\n    msg.enabled = true;\n}else{\n    msg.enabled = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 330,
+        "y": 260,
+        "wires": [
+            [
+                "b429d547.0e12b8"
+            ]
+        ]
+    },
+    {
+        "id": "1364fb20.90b51d",
+        "type": "switch",
+        "z": "e042ef30.3e64d8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Estado falla",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 540,
+        "y": 510,
+        "wires": [
+            [
+                "87254c4d.26d6f8"
+            ]
+        ]
+    },
+    {
+        "id": "87254c4d.26d6f8",
+        "type": "change",
+        "z": "e042ef30.3e64d8",
+        "name": "flagFallaSDT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flagfallaSDT",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 510,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3dde1ad1.409ac6",
+        "type": "change",
+        "z": "e042ef30.3e64d8",
+        "name": "flagFallaSDT",
+        "rules": [
+            {
+                "t": "set",
+                "p": "flagfallaSDT",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::CloseSDT",
+                "pt": "flow",
+                "to": "false",
+                "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "#:(memoryOnly)::OpenSDT",
+                "pt": "flow",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba3951d8.b102a",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "g": "d199f555.ed8398",
+        "name": "LogicaSalidaDigitalSDT",
+        "func": "\nvar CloseSDT = flow.get(\"CloseSDT\",\"memoryOnly\")||false;\nvar OpenSDT = flow.get(\"OpenSDT\",\"memoryOnly\")||false;\n\nglobal.set(\"IO.Functions.DO['Cierre motorizado SDT']\",CloseSDT,'memoryOnly');\nglobal.set(\"IO.Functions.DO['Apertura motorizado SDT']\",OpenSDT,'memoryOnly');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1250,
+        "y": 130,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e84465e.93b118",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "name": "LogicaSalidaDigitalSDT",
+        "func": "\nvar CloseSDT = false;\nvar OpenSDT = false;\n\nglobal.set(\"IO.Functions.DO['Cierre motorizado SDT']\",CloseSDT,'memoryOnly');\nglobal.set(\"IO.Functions.DO['Apertura motorizado SDT']\",OpenSDT,'memoryOnly');\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 730,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d73ada73.dd802",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "g": "7b1cc486.a474c4",
+        "name": "Evento",
+        "func": "msg.payload = \"Apertura Motorizado SDT\";\nmsg.topic = \"Comando HMI\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1210,
+        "y": 220,
+        "wires": [
+            [
+                "b060427b.8f51c"
+            ]
+        ]
+    },
+    {
+        "id": "b060427b.8f51c",
+        "type": "link out",
+        "z": "e042ef30.3e64d8",
+        "g": "7b1cc486.a474c4",
+        "name": "",
+        "links": [
+            "207ea8ce.3dea68",
+            "2da816b7.b2be9a"
+        ],
+        "x": 1315,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "fb32a2a7.2b5c3",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "g": "7b1cc486.a474c4",
+        "name": "Evento",
+        "func": "msg.payload = \"Cierre Motorizado SDT\";\nmsg.topic = \"Comando HMI\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1210,
+        "y": 260,
+        "wires": [
+            [
+                "d48df13e.97f288"
+            ]
+        ]
+    },
+    {
+        "id": "d48df13e.97f288",
+        "type": "link out",
+        "z": "e042ef30.3e64d8",
+        "g": "7b1cc486.a474c4",
+        "name": "",
+        "links": [
+            "207ea8ce.3dea68",
+            "2da816b7.b2be9a"
+        ],
+        "x": 1315,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3b213659.eddff2",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "g": "51715f4d.3b8d1",
+        "name": "Evento",
+        "func": "msg.payload = \"Reset Motorizado SDT\";\nmsg.topic = \"Comando HMI\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 700,
+        "y": 80,
+        "wires": [
+            [
+                "ab3255a6.eff84"
+            ]
+        ]
+    },
+    {
+        "id": "ab3255a6.eff84",
+        "type": "link out",
+        "z": "e042ef30.3e64d8",
+        "g": "51715f4d.3b8d1",
+        "name": "",
+        "links": [
+            "207ea8ce.3dea68",
+            "2da816b7.b2be9a"
+        ],
+        "x": 805,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2dff923ea9969f7b",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "d3d39c6a8715a3cb",
+        "name": "timmerOutConfig",
+        "func": "var confTimer = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];//setaear todas las entradas como normalmente cerradas\n// var confTimer = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];//set como normalmente abiertas\n\nvar salidasDigitales = flow.get(\"ES.SD\")||0;\n\nfor (let i = 32; i <= 39 ; i++) {\n    // const element = array[i];\n    var query = \"Canal\" + (i);\n    if (typeof salidasDigitales[query] != 'undefined'){//si esta definido el canal\n        if ((salidasDigitales[query].Funcion) == \"Apertura motorizado SDT\") {\n            confTimer[i-32] = 1;//seteela como normalmente abierta\n        } else if ((salidasDigitales[query].Funcion) == \"Cierre motorizado SDT\") {//normalmente cerrada\n            confTimer[i-32] = 1;//set como normalmente cerrada\n        }else{\n            confTimer[i-32] = 0;//set como normalmente cerrada\n        }\n    }\n}\n\n\n\n//cambiando el orden del vector valor\n//var aux1 = confTimer.reverse();//Descomentar si el sentido concatenación es diferente\nvar aux2 = confTimer.join('');//unir los vectores sin espacio\nvar conversion = BinarioADecimal(aux2);//conversión de Binario a Decimal\n\n//registro D0 del mapa modbus para el cubloc\nmsg.payload = {\n    \"value\": conversion,\n    \"fc\": 6,\n    \"unitid\": 1,\n    \"address\": 1,\n    \"quantity\": 1\n};\n\n\n// visualizador de variables\ncontext.set(\"confTimer\", confTimer, \"memoryOnly\");\ncontext.set(\"aux2\", aux2, \"memoryOnly\");\ncontext.set(\"conversion\", conversion, \"memoryOnly\");\ncontext.set(\"salidasDigitales\", salidasDigitales,\"memoryOnly\");\n\nreturn msg;\n// función para conversión de binario a decimal\nfunction BinarioADecimal(num) {\n    let sum = 0;\n\n    for (let i = 0; i < num.length; i++) {\n        sum += +num[i] * 2 ** (num.length - 1 - i);\n    }\n    return sum;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3450,
+        "y": 580,
+        "wires": [
+            [
+                "963ae77492686bab"
+            ]
+        ]
     }
 ]

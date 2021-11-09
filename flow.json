@@ -51674,6 +51674,16 @@
                 "label": "Simulación",
                 "value": "Simulación",
                 "type": "str"
+            },
+            {
+                "label": "Apertura motorizado SDT",
+                "value": "Apertura motorizado SDT",
+                "type": "str"
+            },
+            {
+                "label": "Cierre motorizado SDT",
+                "value": "Cierre motorizado SDT",
+                "type": "str"
             }
         ],
         "payload": "",

@@ -74478,7 +74478,8 @@
                 "440bc139.2af13",
                 "ffa15e57.85925",
                 "90f1ad72.499898",
-                "ab7dfbc9.c064f"
+                "ab7dfbc9.c064f",
+                "4a2ff3d8f3f0042b"
             ]
         ]
     },
@@ -74528,6 +74529,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 340,
         "y": 470,
         "wires": [
@@ -74759,6 +74761,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 730,
         "y": 140,
         "wires": [
@@ -74882,6 +74885,23 @@
             [
                 "963ae77492686bab"
             ]
+        ]
+    },
+    {
+        "id": "4a2ff3d8f3f0042b",
+        "type": "function",
+        "z": "e042ef30.3e64d8",
+        "name": "setCierreSDTFoult",
+        "func": "var CloseSDT = false;\nvar flagfallaSDT = flow.get(\"flagfallaSDT\") || false;\ncontext.set(\"flagfallaSDT\", flagfallaSDT,\"memoryOnly\");\nif(flagfallaSDT == true){\n    global.set(\"IO.Functions.DO['Cierre motorizado SDT']\",CloseSDT,'memoryOnly');\n    return msg;\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 520,
+        "wires": [
+            []
         ]
     }
 ]

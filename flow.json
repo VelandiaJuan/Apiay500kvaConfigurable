@@ -1155,7 +1155,7 @@
         "x": 22,
         "y": 637,
         "w": 3146,
-        "h": 2266
+        "h": 2426
     },
     {
         "id": "c3a35f81.5c82b8",
@@ -2087,9 +2087,9 @@
             "5d9b6e5b.adfe78",
             "80a9920a.43161"
         ],
-        "x": 42,
-        "y": 2927,
-        "w": 3020,
+        "x": 2,
+        "y": 3187,
+        "w": 3030,
         "h": 1400
     },
     {
@@ -2773,6 +2773,59 @@
         "y": 1619
     },
     {
+        "id": "d3d39c6a8715a3cb",
+        "type": "group",
+        "z": "7a89175c.90f6a8",
+        "name": "Lectura escritura Cubloc",
+        "style": {
+            "label": true,
+            "color": "#000000"
+        },
+        "nodes": [
+            "9acf28e4ab9d86c2",
+            "5577fbad36c78f71",
+            "4ca154d760d445aa",
+            "58dbe79508c76363",
+            "be91a273f4d3b7cc",
+            "01fda5cb348ca329",
+            "50c167417212ae11",
+            "a3363529f75b21fd",
+            "14f17d41109c0d65",
+            "6e5868e91c268104",
+            "91f325ddd7e3391c",
+            "a689b25173d6aa08",
+            "f656a8f53e9fcf98",
+            "89eaeae75906026c",
+            "d10cdb9df7fef16c",
+            "fbaee2d49c4a594b",
+            "f915813b869f4280",
+            "7b45472dd96b8007",
+            "6f6b489798bd4f47",
+            "0fd77a175c2f643e",
+            "0a4a52c0cf6ab857",
+            "a6c5359aa4138836",
+            "acdacef529bb2e07",
+            "eda8f50b78c5dc32",
+            "889918998a68a90c",
+            "71291895e66f5a52",
+            "1f54778268237f51",
+            "57e0dc365111ac95",
+            "58c4baeec0e06616",
+            "0f872131413413a0",
+            "963ae77492686bab",
+            "2c12d1417cd4cd1d",
+            "fe35e94081db06b3",
+            "6b9b8f3b91c8f042",
+            "80c32167f4b6270a",
+            "9af672e64137b1b6",
+            "6eaa40c6d82a43f6"
+        ],
+        "x": 1364,
+        "y": 309,
+        "w": 2302,
+        "h": 282
+    },
+    {
         "id": "b079c206d161b62c",
         "type": "group",
         "z": "902fc438.e5d758",
@@ -2880,8 +2933,8 @@
         "nodes": [
             "742e267a.cbc27"
         ],
-        "x": 68,
-        "y": 2973,
+        "x": 28,
+        "y": 3213,
         "w": 1284,
         "h": 594
     },
@@ -2951,8 +3004,8 @@
             "1e4f08a2.f6d077",
             "2437732b.dd79cc"
         ],
-        "x": 1368,
-        "y": 2953,
+        "x": 1338,
+        "y": 3213,
         "w": 1668,
         "h": 1348
     },
@@ -3539,7 +3592,7 @@
         "x": 48,
         "y": 703,
         "w": 1714,
-        "h": 2174
+        "h": 2334
     },
     {
         "id": "7c55c2ad.611734",
@@ -4500,8 +4553,8 @@
             "f53cf5588c615bd3",
             "94ed06900e8939f7"
         ],
-        "x": 94,
-        "y": 2999,
+        "x": 54,
+        "y": 3239,
         "w": 1232,
         "h": 542
     },
@@ -4541,8 +4594,8 @@
             "2b6cf073f20493b7",
             "b6a4e02ca271262e"
         ],
-        "x": 1394,
-        "y": 2979,
+        "x": 1364,
+        "y": 3239,
         "w": 1232,
         "h": 322
     },
@@ -4580,8 +4633,8 @@
             "31dcbe69.82dd92",
             "466d829c.38acdc"
         ],
-        "x": 1394,
-        "y": 3299,
+        "x": 1364,
+        "y": 3559,
         "w": 722,
         "h": 442
     },
@@ -5068,7 +5121,6 @@
             "color": "#000000"
         },
         "nodes": [
-            "f470fc15.8b31e8",
             "d671f08c.fac63",
             "cb3f9a14.d22ae",
             "ae41ae78.9752e8",
@@ -5117,7 +5169,8 @@
             "b7ffb7b45a3db6bf",
             "901abd09c7f1d327",
             "2e59a81b92fea8c7",
-            "697cf663800f4ce7"
+            "697cf663800f4ce7",
+            "1651641fc9718681"
         ],
         "x": 74,
         "y": 729,
@@ -5152,7 +5205,7 @@
             "dc7c0e6833d4017c"
         ],
         "x": 84,
-        "y": 2669,
+        "y": 2829,
         "w": 892,
         "h": 182
     },
@@ -5623,66 +5676,31 @@
             "c3df5a6a531467c2",
             "9a42b3bc50c233d0",
             "5a01ed73.b7a1f4",
-            "c73d51ea.999a1",
-            "38362b7a.04f554"
+            "c0110b06537018a7",
+            "5264843c3f8a5bfa",
+            "e45a597040e5b6b4",
+            "298da47654400d29",
+            "92a9eee93932c23a",
+            "0cf78c0b09d6273c",
+            "3e79f87c0d2da049",
+            "512acf9bc58ddbb5",
+            "d5b99c7adfc9d65e",
+            "c1cd44132e62f3ae",
+            "a60416d83c098a93",
+            "ff82b9d2f4f86cd2",
+            "5ccbdf52031b91f9",
+            "14bbad2823dcf8cc",
+            "031bebed30084501",
+            "8dfedc46a2445f9f",
+            "de709a4113b94499",
+            "b055cc7987e106cf",
+            "d2c4820f2156edde",
+            "700dc73e2dd44c97"
         ],
         "x": 84,
         "y": 1579,
         "w": 1652,
-        "h": 1032
-    },
-    {
-        "id": "d3d39c6a8715a3cb",
-        "type": "group",
-        "z": "7a89175c.90f6a8",
-        "name": "Lectura escritura Cubloc",
-        "style": {
-            "label": true,
-            "color": "#000000"
-        },
-        "nodes": [
-            "9acf28e4ab9d86c2",
-            "5577fbad36c78f71",
-            "4ca154d760d445aa",
-            "58dbe79508c76363",
-            "be91a273f4d3b7cc",
-            "01fda5cb348ca329",
-            "50c167417212ae11",
-            "a3363529f75b21fd",
-            "14f17d41109c0d65",
-            "6e5868e91c268104",
-            "91f325ddd7e3391c",
-            "a689b25173d6aa08",
-            "f656a8f53e9fcf98",
-            "89eaeae75906026c",
-            "d10cdb9df7fef16c",
-            "fbaee2d49c4a594b",
-            "f915813b869f4280",
-            "7b45472dd96b8007",
-            "6f6b489798bd4f47",
-            "0fd77a175c2f643e",
-            "0a4a52c0cf6ab857",
-            "a6c5359aa4138836",
-            "acdacef529bb2e07",
-            "eda8f50b78c5dc32",
-            "889918998a68a90c",
-            "71291895e66f5a52",
-            "1f54778268237f51",
-            "57e0dc365111ac95",
-            "58c4baeec0e06616",
-            "0f872131413413a0",
-            "963ae77492686bab",
-            "2c12d1417cd4cd1d",
-            "fe35e94081db06b3",
-            "6b9b8f3b91c8f042",
-            "80c32167f4b6270a",
-            "9af672e64137b1b6",
-            "6eaa40c6d82a43f6"
-        ],
-        "x": 1364,
-        "y": 309,
-        "w": 2302,
-        "h": 282
+        "h": 1202
     },
     {
         "id": "d25d405a.19cff",
@@ -47439,133 +47457,6 @@
         "wires": []
     },
     {
-        "id": "f470fc15.8b31e8",
-        "type": "ui_dropdown",
-        "z": "7a89175c.90f6a8",
-        "g": "76d03353.299b94",
-        "name": "",
-        "label": "Función",
-        "tooltip": "",
-        "place": "--",
-        "group": "9457c46f.d710c8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "multiple": false,
-        "options": [
-            {
-                "label": "Start",
-                "value": "Start",
-                "type": "str"
-            },
-            {
-                "label": "Stop",
-                "value": "Stop",
-                "type": "str"
-            },
-            {
-                "label": "Reset",
-                "value": "Reset",
-                "type": "str"
-            },
-            {
-                "label": "Stop ESD",
-                "value": "Stop ESD",
-                "type": "str"
-            },
-            {
-                "label": "Disparo alto nivel de aceite SUT",
-                "value": "Disparo alto nivel de aceite SUT",
-                "type": "str"
-            },
-            {
-                "label": "Disparo alta temperatura SUT",
-                "value": "Disparo alta temperatura SUT",
-                "type": "str"
-            },
-            {
-                "label": "Alarma alta temperatura SUT",
-                "value": "Alarma alta temperatura SUT",
-                "type": "str"
-            },
-            {
-                "label": "Alarma bajo nivel de aceite SUT",
-                "value": "Alarma bajo nivel de aceite SUT",
-                "type": "str"
-            },
-            {
-                "label": "Disparo bajo bajo nivel de aceite SUT",
-                "value": "Disparo bajo bajo nivel de aceite SUT",
-                "type": "str"
-            },
-            {
-                "label": "Disparo Valvula sobrepresión SUT",
-                "value": "Disparo válvula sobre-presión SUT",
-                "type": "str"
-            },
-            {
-                "label": "Alarma DPS",
-                "value": "Alarma DPS",
-                "type": "str"
-            },
-            {
-                "label": "Disparo alta temperatura filtros",
-                "value": "Disparo alta temperatura filtros",
-                "type": "str"
-            },
-            {
-                "label": "Disparo alta presión THP",
-                "value": "Disparo alta presión THP",
-                "type": "str"
-            },
-            {
-                "label": "Disparo sobre tensión SUT",
-                "value": "Disparo sobre-tensión SUT",
-                "type": "str"
-            },
-            {
-                "label": "ESD Remoto",
-                "value": "ESD Remoto",
-                "type": "str"
-            },
-            {
-                "label": "Disparo puerta abierta",
-                "value": "Disparo puerta abierta",
-                "type": "str"
-            },
-            {
-                "label": "Protección térmica de motor",
-                "value": "Protección térmica de motor",
-                "type": "str"
-            },
-            {
-                "label": "Monitoreo",
-                "value": "Monitoreo",
-                "type": "str"
-            },
-            {
-                "label": "Disparo shutdown SCC",
-                "value": "Disparo shutdown SCC",
-                "type": "str"
-            },
-            {
-                "label": "Disparo baja presión en la troncal",
-                "value": "Disparo baja presión en la troncal",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "",
-        "x": 730,
-        "y": 800,
-        "wires": [
-            [
-                "cb3f9a14.d22ae"
-            ]
-        ]
-    },
-    {
         "id": "d671f08c.fac63",
         "type": "change",
         "z": "7a89175c.90f6a8",
@@ -48328,7 +48219,7 @@
         "y": 930,
         "wires": [
             [
-                "f470fc15.8b31e8"
+                "1651641fc9718681"
             ],
             [
                 "d6e3de24.2cb928"
@@ -48912,7 +48803,7 @@
         "repair": false,
         "outputs": 1,
         "x": 590,
-        "y": 2710,
+        "y": 2870,
         "wires": [
             [
                 "737d9189cedc73ed"
@@ -48936,7 +48827,7 @@
         "repair": false,
         "outputs": 1,
         "x": 590,
-        "y": 2760,
+        "y": 2920,
         "wires": [
             [
                 "079b06c4d753c468"
@@ -48960,7 +48851,7 @@
         "repair": false,
         "outputs": 1,
         "x": 590,
-        "y": 2810,
+        "y": 2970,
         "wires": [
             [
                 "dc7c0e6833d4017c"
@@ -48979,7 +48870,7 @@
         "inout": "out",
         "property": "payload",
         "x": 470,
-        "y": 2810,
+        "y": 2970,
         "wires": [
             [
                 "27a840fd.42a858"
@@ -48998,7 +48889,7 @@
         "inout": "out",
         "property": "payload",
         "x": 470,
-        "y": 2760,
+        "y": 2920,
         "wires": [
             [
                 "28e01967.4859fe"
@@ -49017,7 +48908,7 @@
         "inout": "out",
         "property": "payload",
         "x": 470,
-        "y": 2710,
+        "y": 2870,
         "wires": [
             [
                 "dd9a0d3d.ab8378"
@@ -49043,7 +48934,7 @@
         "payload": "true",
         "payloadType": "bool",
         "x": 180,
-        "y": 2710,
+        "y": 2870,
         "wires": [
             [
                 "a2a2a85e.6d85f",
@@ -51208,8 +51099,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3060,
+        "x": 1200,
+        "y": 3300,
         "wires": [
             []
         ]
@@ -51241,8 +51132,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3100,
+        "x": 1200,
+        "y": 3340,
         "wires": [
             []
         ]
@@ -51274,8 +51165,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3140,
+        "x": 1200,
+        "y": 3380,
         "wires": [
             []
         ]
@@ -51307,8 +51198,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3180,
+        "x": 1200,
+        "y": 3420,
         "wires": [
             []
         ]
@@ -51340,8 +51231,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3220,
+        "x": 1200,
+        "y": 3460,
         "wires": [
             []
         ]
@@ -51373,8 +51264,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3260,
+        "x": 1200,
+        "y": 3500,
         "wires": [
             []
         ]
@@ -51406,8 +51297,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3300,
+        "x": 1200,
+        "y": 3540,
         "wires": [
             []
         ]
@@ -51439,8 +51330,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3340,
+        "x": 1200,
+        "y": 3580,
         "wires": [
             []
         ]
@@ -51472,8 +51363,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3380,
+        "x": 1200,
+        "y": 3620,
         "wires": [
             []
         ]
@@ -51505,8 +51396,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3420,
+        "x": 1200,
+        "y": 3660,
         "wires": [
             []
         ]
@@ -51538,8 +51429,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3460,
+        "x": 1200,
+        "y": 3700,
         "wires": [
             []
         ]
@@ -51571,8 +51462,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 3500,
+        "x": 1200,
+        "y": 3740,
         "wires": [
             []
         ]
@@ -51650,8 +51541,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 12,
-        "x": 1030,
-        "y": 3260,
+        "x": 990,
+        "y": 3500,
         "wires": [
             [
                 "fbfdc632.b7ce48"
@@ -51711,8 +51602,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 3140,
+        "x": 920,
+        "y": 3380,
         "wires": [
             []
         ]
@@ -51737,8 +51628,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 3090,
+        "x": 920,
+        "y": 3330,
         "wires": [
             []
         ]
@@ -51787,8 +51678,8 @@
         ],
         "payload": "",
         "topic": "",
-        "x": 760,
-        "y": 3090,
+        "x": 720,
+        "y": 3330,
         "wires": [
             [
                 "9f6b3c9b.c3ac28"
@@ -51824,8 +51715,8 @@
         ],
         "payload": "",
         "topic": "",
-        "x": 740,
-        "y": 3140,
+        "x": 700,
+        "y": 3380,
         "wires": [
             [
                 "5476c23f.573384"
@@ -51851,8 +51742,8 @@
         "payload": "SD_Config",
         "payloadType": "flow",
         "topic": "",
-        "x": 860,
-        "y": 3260,
+        "x": 820,
+        "y": 3500,
         "wires": [
             [
                 "57c4ecc7.38c9ac",
@@ -51873,8 +51764,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 510,
-        "y": 3290,
+        "x": 470,
+        "y": 3530,
         "wires": []
     },
     {
@@ -51888,8 +51779,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 510,
-        "y": 3160,
+        "x": 470,
+        "y": 3400,
         "wires": [
             [
                 "c29f37e6.63b16"
@@ -51919,8 +51810,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
-        "y": 3040,
+        "x": 910,
+        "y": 3280,
         "wires": [
             []
         ]
@@ -51984,8 +51875,8 @@
         ],
         "payload": "",
         "topic": "",
-        "x": 770,
-        "y": 3040,
+        "x": 730,
+        "y": 3280,
         "wires": [
             [
                 "1534fa6c.e8a65e"
@@ -52016,8 +51907,8 @@
             "512df90.8039408"
         ],
         "uncaught": false,
-        "x": 240,
-        "y": 3160,
+        "x": 200,
+        "y": 3400,
         "wires": [
             [
                 "dc847f0d.6c9988",
@@ -52044,8 +51935,8 @@
         "payload": "ES_Config",
         "payloadType": "flow",
         "topic": "",
-        "x": 180,
-        "y": 3350,
+        "x": 140,
+        "y": 3590,
         "wires": [
             [
                 "90e165b4.870ae",
@@ -52065,8 +51956,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 490,
-        "y": 3210,
+        "x": 450,
+        "y": 3450,
         "wires": [
             [
                 "e8f6e11a.ede6c8"
@@ -52093,8 +51984,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
-        "y": 3250,
+        "x": 450,
+        "y": 3490,
         "wires": [
             []
         ]
@@ -52111,8 +52002,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 800,
-        "y": 3350,
+        "x": 760,
+        "y": 3590,
         "wires": [
             [
                 "637ff0465e23b3ff"
@@ -52135,8 +52026,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 670,
-        "y": 3350,
+        "x": 630,
+        "y": 3590,
         "wires": [
             [
                 "bd7dd23a7e43554f"
@@ -52187,8 +52078,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 920,
-        "y": 3350,
+        "x": 880,
+        "y": 3590,
         "wires": []
     },
     {
@@ -52200,8 +52091,8 @@
         "links": [
             "ad87cee4.7dbb5"
         ],
-        "x": 575,
-        "y": 3380,
+        "x": 535,
+        "y": 3620,
         "wires": [
             [
                 "7f496609020b2c65"
@@ -52247,8 +52138,8 @@
         ],
         "payload": "",
         "topic": "",
-        "x": 1610,
-        "y": 3090,
+        "x": 1580,
+        "y": 3350,
         "wires": [
             [
                 "9524b437.51c5c"
@@ -52304,8 +52195,8 @@
         ],
         "payload": "",
         "topic": "",
-        "x": 2080,
-        "y": 3020,
+        "x": 2050,
+        "y": 3280,
         "wires": [
             [
                 "2cf5ef28.2fd368"
@@ -52328,8 +52219,8 @@
         "mode": "number",
         "delay": 300,
         "topic": "",
-        "x": 2090,
-        "y": 3070,
+        "x": 2060,
+        "y": 3330,
         "wires": [
             [
                 "fff0ee98.0c9fd"
@@ -52352,8 +52243,8 @@
         "mode": "number",
         "delay": 300,
         "topic": "",
-        "x": 2090,
-        "y": 3120,
+        "x": 2060,
+        "y": 3380,
         "wires": [
             [
                 "41c6ba6a.16e404"
@@ -52379,8 +52270,8 @@
         "payload": "SA_Config",
         "payloadType": "flow",
         "topic": "",
-        "x": 2250,
-        "y": 3200,
+        "x": 2220,
+        "y": 3460,
         "wires": [
             [
                 "73f3e36f.fef6e4",
@@ -52408,8 +52299,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1790,
-        "y": 3090,
+        "x": 1760,
+        "y": 3350,
         "wires": [
             []
         ]
@@ -52434,8 +52325,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2300,
-        "y": 3020,
+        "x": 2270,
+        "y": 3280,
         "wires": [
             []
         ]
@@ -52460,8 +52351,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2310,
-        "y": 3070,
+        "x": 2280,
+        "y": 3330,
         "wires": [
             []
         ]
@@ -52486,8 +52377,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2310,
-        "y": 3120,
+        "x": 2280,
+        "y": 3380,
         "wires": [
             []
         ]
@@ -52525,8 +52416,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 4,
-        "x": 2390,
-        "y": 3200,
+        "x": 2360,
+        "y": 3460,
         "wires": [
             [
                 "fa663982.7376"
@@ -52576,8 +52467,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2550,
-        "y": 3130,
+        "x": 2520,
+        "y": 3390,
         "wires": [
             []
         ]
@@ -52616,8 +52507,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2550,
-        "y": 3170,
+        "x": 2520,
+        "y": 3430,
         "wires": [
             []
         ]
@@ -52635,8 +52526,8 @@
         "label": "Función:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 2080,
-        "y": 3160,
+        "x": 2050,
+        "y": 3420,
         "wires": []
     },
     {
@@ -52652,8 +52543,8 @@
         "label": "Rango mínimo:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 2090,
-        "y": 3200,
+        "x": 2060,
+        "y": 3460,
         "wires": []
     },
     {
@@ -52669,8 +52560,8 @@
         "label": "Rango máximo:",
         "format": "{{msg.payload}}",
         "layout": "row-left",
-        "x": 2090,
-        "y": 3240,
+        "x": 2060,
+        "y": 3500,
         "wires": []
     },
     {
@@ -52684,8 +52575,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1810,
-        "y": 3140,
+        "x": 1780,
+        "y": 3400,
         "wires": [
             [
                 "84039f9a.8536f8",
@@ -52716,8 +52607,8 @@
             "bb5e3162.6feb9"
         ],
         "uncaught": false,
-        "x": 1540,
-        "y": 3140,
+        "x": 1510,
+        "y": 3400,
         "wires": [
             [
                 "3624bfe8.d588"
@@ -52743,8 +52634,8 @@
         "payload": "ES_Config",
         "payloadType": "flow",
         "topic": "",
-        "x": 1560,
-        "y": 3190,
+        "x": 1530,
+        "y": 3450,
         "wires": [
             [
                 "b23d1104.2e7b8"
@@ -52762,8 +52653,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1810,
-        "y": 3190,
+        "x": 1780,
+        "y": 3450,
         "wires": []
     },
     {
@@ -52800,8 +52691,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2550,
-        "y": 3210,
+        "x": 2520,
+        "y": 3470,
         "wires": [
             []
         ]
@@ -52840,8 +52731,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2550,
-        "y": 3250,
+        "x": 2520,
+        "y": 3510,
         "wires": [
             []
         ]
@@ -52866,8 +52757,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 3610,
+        "x": 1960,
+        "y": 3870,
         "wires": [
             []
         ]
@@ -52892,8 +52783,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 3520,
+        "x": 1960,
+        "y": 3780,
         "wires": [
             []
         ]
@@ -52918,8 +52809,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 3430,
+        "x": 1960,
+        "y": 3690,
         "wires": [
             []
         ]
@@ -52944,8 +52835,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 3340,
+        "x": 1960,
+        "y": 3600,
         "wires": [
             []
         ]
@@ -52961,8 +52852,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1810,
-        "y": 3340,
+        "x": 1780,
+        "y": 3600,
         "wires": [
             [
                 "65ad9b0d.6b12ac"
@@ -52980,8 +52871,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1810,
-        "y": 3430,
+        "x": 1780,
+        "y": 3690,
         "wires": [
             [
                 "3986e0cf.5e4f78"
@@ -52999,8 +52890,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1810,
-        "y": 3520,
+        "x": 1780,
+        "y": 3780,
         "wires": [
             [
                 "d39a12de.5d991"
@@ -53018,8 +52909,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1810,
-        "y": 3610,
+        "x": 1780,
+        "y": 3870,
         "wires": [
             [
                 "d52f2cd1.ac7d18"
@@ -53037,8 +52928,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1660,
-        "y": 3650,
+        "x": 1630,
+        "y": 3910,
         "wires": [
             [
                 "5cb767da.98178",
@@ -53063,8 +52954,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1660,
-        "y": 3560,
+        "x": 1630,
+        "y": 3820,
         "wires": [
             [
                 "bc63c380.fb7a78",
@@ -53089,8 +52980,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1660,
-        "y": 3470,
+        "x": 1630,
+        "y": 3730,
         "wires": [
             [
                 "e105d502.4aeb1",
@@ -53115,8 +53006,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1660,
-        "y": 3380,
+        "x": 1630,
+        "y": 3640,
         "wires": [
             [
                 "f4e358da.4d49",
@@ -53148,8 +53039,8 @@
         "topic": "",
         "payload": "true",
         "payloadType": "bool",
-        "x": 1490,
-        "y": 3380,
+        "x": 1460,
+        "y": 3640,
         "wires": [
             [
                 "bbf3ce81.a5335",
@@ -53172,8 +53063,8 @@
             "c295a41b.c17618"
         ],
         "uncaught": false,
-        "x": 1590,
-        "y": 3700,
+        "x": 1560,
+        "y": 3960,
         "wires": [
             [
                 "23ebaedc.4ea2ba"
@@ -53191,8 +53082,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 1800,
-        "y": 3700,
+        "x": 1770,
+        "y": 3960,
         "wires": [
             [
                 "10966509.4f25e3"
@@ -53212,8 +53103,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1940,
-        "y": 3700,
+        "x": 1910,
+        "y": 3960,
         "wires": []
     },
     {
@@ -53230,8 +53121,8 @@
         "targetType": "msg",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 1950,
-        "y": 3390,
+        "x": 1920,
+        "y": 3650,
         "wires": []
     },
     {
@@ -53242,8 +53133,8 @@
         "endpoint": "e9d237aaf9318e74",
         "variable": "AO1",
         "name": "",
-        "x": 1790,
-        "y": 3380,
+        "x": 1760,
+        "y": 3640,
         "wires": []
     },
     {
@@ -53254,8 +53145,8 @@
         "endpoint": "e9d237aaf9318e74",
         "variable": "AO2",
         "name": "",
-        "x": 1790,
-        "y": 3470,
+        "x": 1760,
+        "y": 3730,
         "wires": []
     },
     {
@@ -53271,8 +53162,8 @@
         "label": "",
         "format": "Simulación AO1/AO3",
         "layout": "row-center",
-        "x": 2230,
-        "y": 3340,
+        "x": 2200,
+        "y": 3600,
         "wires": []
     },
     {
@@ -53299,8 +53190,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 2240,
-        "y": 3380,
+        "x": 2210,
+        "y": 3640,
         "wires": [
             [
                 "f9db0dde.a8fef",
@@ -53326,8 +53217,8 @@
         "min": "4",
         "max": "20",
         "step": 1,
-        "x": 2340,
-        "y": 3540,
+        "x": 2310,
+        "y": 3800,
         "wires": [
             [
                 "62b54556.f80694",
@@ -53355,8 +53246,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2410,
-        "y": 3380,
+        "x": 2380,
+        "y": 3640,
         "wires": [
             []
         ]
@@ -53372,8 +53263,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2540,
-        "y": 3510,
+        "x": 2510,
+        "y": 3770,
         "wires": [
             [
                 "af7bcd62.060f7"
@@ -53400,8 +53291,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2540,
-        "y": 3550,
+        "x": 2510,
+        "y": 3810,
         "wires": [
             []
         ]
@@ -53430,8 +53321,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 2250,
-        "y": 3600,
+        "x": 2220,
+        "y": 3860,
         "wires": [
             [
                 "348a92f6.f6e64e",
@@ -53459,8 +53350,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 3610,
+        "x": 2440,
+        "y": 3870,
         "wires": [
             []
         ]
@@ -53483,8 +53374,8 @@
         "min": "4",
         "max": "20",
         "step": 1,
-        "x": 2380,
-        "y": 3740,
+        "x": 2350,
+        "y": 4000,
         "wires": [
             [
                 "141d3991.af4366",
@@ -53512,8 +53403,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2530,
-        "y": 3780,
+        "x": 2500,
+        "y": 4040,
         "wires": [
             []
         ]
@@ -53531,8 +53422,8 @@
         "label": "",
         "format": "AO2:_ {{msg.payload}}",
         "layout": "col-center",
-        "x": 2680,
-        "y": 3740,
+        "x": 2650,
+        "y": 4000,
         "wires": []
     },
     {
@@ -53548,8 +53439,8 @@
         "label": "",
         "format": "AO1:_ {{msg.payload}}",
         "layout": "col-center",
-        "x": 2690,
-        "y": 3510,
+        "x": 2660,
+        "y": 3770,
         "wires": []
     },
     {
@@ -53732,8 +53623,8 @@
         "label": "",
         "format": "Simulación AO2/AO4",
         "layout": "row-center",
-        "x": 2400,
-        "y": 3340,
+        "x": 2370,
+        "y": 3600,
         "wires": []
     },
     {
@@ -53764,7 +53655,7 @@
         "initialize": "",
         "finalize": "",
         "x": 350,
-        "y": 2710,
+        "y": 2870,
         "wires": [
             [
                 "a08074ff.25fb48"
@@ -53783,7 +53674,7 @@
         "initialize": "",
         "finalize": "",
         "x": 350,
-        "y": 2760,
+        "y": 2920,
         "wires": [
             [
                 "ef425222.75e11"
@@ -53802,7 +53693,7 @@
         "initialize": "",
         "finalize": "",
         "x": 350,
-        "y": 2810,
+        "y": 2970,
         "wires": [
             [
                 "ac563b4d.79d9b8"
@@ -53837,7 +53728,7 @@
         "to": "",
         "reg": false,
         "x": 710,
-        "y": 2710,
+        "y": 2870,
         "wires": [
             [
                 "81f602598a6222c1"
@@ -53852,7 +53743,7 @@
         "name": "",
         "env": [],
         "x": 890,
-        "y": 2710,
+        "y": 2870,
         "wires": [
             [],
             []
@@ -53886,7 +53777,7 @@
         "to": "",
         "reg": false,
         "x": 710,
-        "y": 2760,
+        "y": 2920,
         "wires": [
             [
                 "81f602598a6222c1"
@@ -53921,7 +53812,7 @@
         "to": "",
         "reg": false,
         "x": 710,
-        "y": 2810,
+        "y": 2970,
         "wires": [
             [
                 "81f602598a6222c1"
@@ -54104,8 +53995,8 @@
         ],
         "allowColorForValueInMessage": false,
         "name": "ED",
-        "x": 920,
-        "y": 3430,
+        "x": 880,
+        "y": 3670,
         "wires": []
     },
     {
@@ -54119,8 +54010,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 780,
-        "y": 3430,
+        "x": 740,
+        "y": 3670,
         "wires": [
             [
                 "0ee7137faf7e5266"
@@ -54136,8 +54027,8 @@
         "links": [
             "ecf98f3f.4a704"
         ],
-        "x": 675,
-        "y": 3430,
+        "x": 635,
+        "y": 3670,
         "wires": [
             [
                 "8c3766dbc41a84da"
@@ -54387,8 +54278,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 760,
-        "y": 3390,
+        "x": 720,
+        "y": 3630,
         "wires": [
             [
                 "bd7dd23a7e43554f"
@@ -54404,8 +54295,8 @@
         "links": [
             "4372d5a0.d338dc"
         ],
-        "x": 675,
-        "y": 3390,
+        "x": 635,
+        "y": 3630,
         "wires": [
             [
                 "16235279f7b6eaa7"
@@ -54509,8 +54400,8 @@
         "links": [
             "ad87cee4.7dbb5"
         ],
-        "x": 345,
-        "y": 3460,
+        "x": 305,
+        "y": 3700,
         "wires": [
             []
         ]
@@ -54524,8 +54415,8 @@
         "links": [
             "ad87cee4.7dbb5"
         ],
-        "x": 525,
-        "y": 3040,
+        "x": 485,
+        "y": 3280,
         "wires": [
             [
                 "be049efe6b0fc3b9"
@@ -54552,8 +54443,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 630,
-        "y": 3040,
+        "x": 590,
+        "y": 3280,
         "wires": [
             [
                 "d0dec1ce.b76b2"
@@ -54713,8 +54604,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
-        "y": 3210,
+        "x": 740,
+        "y": 3450,
         "wires": [
             [
                 "ec7a9df336d4ffeb"
@@ -54730,8 +54621,8 @@
         "links": [
             "207ea8ce.3dea68"
         ],
-        "x": 905,
-        "y": 3210,
+        "x": 865,
+        "y": 3450,
         "wires": []
     },
     {
@@ -54759,8 +54650,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2270,
-        "y": 3260,
+        "x": 2240,
+        "y": 3520,
         "wires": [
             [
                 "b6a4e02ca271262e"
@@ -54776,8 +54667,8 @@
         "links": [
             "207ea8ce.3dea68"
         ],
-        "x": 2385,
-        "y": 3260,
+        "x": 2355,
+        "y": 3520,
         "wires": []
     },
     {
@@ -54837,8 +54728,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2530,
-        "y": 3740,
+        "x": 2500,
+        "y": 4000,
         "wires": [
             [
                 "ab756585.f8d38"
@@ -54864,8 +54755,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2310,
-        "y": 3430,
+        "x": 2280,
+        "y": 3690,
         "wires": [
             [
                 "ea4eb79b.316ba8"
@@ -54895,8 +54786,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2460,
-        "y": 3430,
+        "x": 2430,
+        "y": 3690,
         "wires": [
             [
                 "1bcfc698.e03459"
@@ -54923,8 +54814,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2460,
-        "y": 3470,
+        "x": 2430,
+        "y": 3730,
         "wires": [
             [
                 "334f0b8a.247244",
@@ -54952,8 +54843,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2590,
-        "y": 3470,
+        "x": 2560,
+        "y": 3730,
         "wires": [
             [
                 "af7bcd62.060f7"
@@ -54980,8 +54871,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2590,
-        "y": 3430,
+        "x": 2560,
+        "y": 3690,
         "wires": [
             [
                 "62b54556.f80694",
@@ -55008,8 +54899,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2330,
-        "y": 3670,
+        "x": 2300,
+        "y": 3930,
         "wires": [
             [
                 "5c6930ce.2c3a5"
@@ -55039,8 +54930,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2460,
-        "y": 3650,
+        "x": 2430,
+        "y": 3910,
         "wires": [
             [
                 "bc3410de.53db3"
@@ -55067,8 +54958,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2460,
-        "y": 3690,
+        "x": 2430,
+        "y": 3950,
         "wires": [
             [
                 "a5e5312d.63079",
@@ -55096,8 +54987,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2610,
-        "y": 3650,
+        "x": 2580,
+        "y": 3910,
         "wires": [
             [
                 "656cadda.b9e2b4"
@@ -55124,8 +55015,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2610,
-        "y": 3690,
+        "x": 2580,
+        "y": 3950,
         "wires": [
             [
                 "ab756585.f8d38"
@@ -55156,8 +55047,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 2240,
-        "y": 3850,
+        "x": 2210,
+        "y": 4110,
         "wires": [
             [
                 "816fe6c.5560918",
@@ -55183,8 +55074,8 @@
         "min": "4",
         "max": "20",
         "step": 1,
-        "x": 2350,
-        "y": 3980,
+        "x": 2320,
+        "y": 4240,
         "wires": [
             [
                 "a72ebf5e.0514c",
@@ -55205,8 +55096,8 @@
         "label": "",
         "format": "AO3:_ {{msg.payload}}",
         "layout": "col-center",
-        "x": 2730,
-        "y": 3960,
+        "x": 2700,
+        "y": 4220,
         "wires": []
     },
     {
@@ -55233,8 +55124,8 @@
         "offvalueType": "bool",
         "officon": "",
         "offcolor": "",
-        "x": 2240,
-        "y": 4090,
+        "x": 2210,
+        "y": 4350,
         "wires": [
             [
                 "4de5f975.f97138",
@@ -55260,8 +55151,8 @@
         "min": "4",
         "max": "20",
         "step": 1,
-        "x": 2360,
-        "y": 4240,
+        "x": 2330,
+        "y": 4500,
         "wires": [
             [
                 "93dd0037.a93e2",
@@ -55282,8 +55173,8 @@
         "label": "",
         "format": "AO4:_ {{msg.payload}}",
         "layout": "col-center",
-        "x": 2740,
-        "y": 4260,
+        "x": 2710,
+        "y": 4520,
         "wires": []
     },
     {
@@ -55460,8 +55351,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2540,
-        "y": 3950,
+        "x": 2510,
+        "y": 4210,
         "wires": [
             [
                 "9fa6cdc1.a6a31"
@@ -55513,8 +55404,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2490,
-        "y": 4090,
+        "x": 2460,
+        "y": 4350,
         "wires": [
             []
         ]
@@ -55538,8 +55429,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2370,
-        "y": 4140,
+        "x": 2340,
+        "y": 4400,
         "wires": [
             [
                 "96389ea7.12e5f"
@@ -55569,8 +55460,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2520,
-        "y": 4130,
+        "x": 2490,
+        "y": 4390,
         "wires": [
             [
                 "d77c66d4.20fa38"
@@ -55597,8 +55488,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2520,
-        "y": 4170,
+        "x": 2490,
+        "y": 4430,
         "wires": [
             [
                 "5f3faf42.9714a",
@@ -55626,8 +55517,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2650,
-        "y": 4130,
+        "x": 2620,
+        "y": 4390,
         "wires": [
             [
                 "c305df5f.2aaea"
@@ -55654,8 +55545,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2650,
-        "y": 4170,
+        "x": 2620,
+        "y": 4430,
         "wires": [
             [
                 "8cba063f.f5b278"
@@ -55673,8 +55564,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 2520,
-        "y": 4220,
+        "x": 2490,
+        "y": 4480,
         "wires": [
             [
                 "8cba063f.f5b278"
@@ -55701,8 +55592,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2530,
-        "y": 4260,
+        "x": 2500,
+        "y": 4520,
         "wires": [
             []
         ]
@@ -55715,8 +55606,8 @@
         "endpoint": "e9d237aaf9318e74",
         "variable": "AO3",
         "name": "",
-        "x": 1800,
-        "y": 3560,
+        "x": 1770,
+        "y": 3820,
         "wires": []
     },
     {
@@ -55727,8 +55618,8 @@
         "endpoint": "e9d237aaf9318e74",
         "variable": "AO4",
         "name": "",
-        "x": 1800,
-        "y": 3660,
+        "x": 1770,
+        "y": 3920,
         "wires": []
     },
     {
@@ -55749,8 +55640,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1910,
-        "y": 3790,
+        "x": 1880,
+        "y": 4050,
         "wires": [
             [
                 "e87d903c.fade3"
@@ -55766,8 +55657,8 @@
         "links": [
             "4372d5a0.d338dc"
         ],
-        "x": 1815,
-        "y": 3790,
+        "x": 1785,
+        "y": 4050,
         "wires": [
             [
                 "d16c815f.a1479"
@@ -55794,8 +55685,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2060,
-        "y": 3790,
+        "x": 2030,
+        "y": 4050,
         "wires": [
             [
                 "85bbe973.0f8068",
@@ -57111,8 +57002,7 @@
         "y": 2070,
         "wires": [
             [
-                "f26c7cd67e2a751d",
-                "38362b7a.04f554"
+                "f26c7cd67e2a751d"
             ]
         ]
     },
@@ -57414,11 +57304,31 @@
                 "t": "eq",
                 "v": "Disparo baja presión en la troncal",
                 "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Estado motorizado SDT",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Disparo Valvula sobrepresión SDT",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Disparo alta temperatura SDT",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Disparo bajo bajo nivel de aceite SDT",
+                "vt": "str"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 20,
+        "outputs": 24,
         "x": 790,
         "y": 2080,
         "wires": [
@@ -57474,14 +57384,25 @@
                 "30127a72a9e86380"
             ],
             [
-                "5a01ed73.b7a1f4",
-                "c73d51ea.999a1"
+                "5a01ed73.b7a1f4"
             ],
             [
                 "201ace7033e4132b"
             ],
             [
                 "da4c7a07f5b760bc"
+            ],
+            [
+                "c0110b06537018a7"
+            ],
+            [
+                "0cf78c0b09d6273c"
+            ],
+            [
+                "a60416d83c098a93"
+            ],
+            [
+                "8dfedc46a2445f9f"
             ]
         ]
     },
@@ -59371,42 +59292,6 @@
         ]
     },
     {
-        "id": "c73d51ea.999a1",
-        "type": "debug",
-        "z": "7a89175c.90f6a8",
-        "g": "49c39e.d1336c64",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 830,
-        "y": 2340,
-        "wires": []
-    },
-    {
-        "id": "38362b7a.04f554",
-        "type": "debug",
-        "z": "7a89175c.90f6a8",
-        "g": "49c39e.d1336c64",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": true,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 750,
-        "y": 2260,
-        "wires": []
-    },
-    {
         "id": "c305df5f.2aaea",
         "type": "switch",
         "z": "7a89175c.90f6a8",
@@ -59427,8 +59312,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2800,
-        "y": 4130,
+        "x": 2770,
+        "y": 4390,
         "wires": [
             [
                 "93dd0037.a93e2",
@@ -59459,8 +59344,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2960,
-        "y": 4130,
+        "x": 2930,
+        "y": 4390,
         "wires": [
             [
                 "93dd0037.a93e2",
@@ -59490,8 +59375,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2780,
-        "y": 3860,
+        "x": 2750,
+        "y": 4120,
         "wires": [
             [
                 "cbb9d49c.bf5b88",
@@ -59522,8 +59407,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2910,
-        "y": 3870,
+        "x": 2880,
+        "y": 4130,
         "wires": [
             [
                 "cbb9d49c.bf5b88",
@@ -59553,8 +59438,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2760,
-        "y": 3640,
+        "x": 2730,
+        "y": 3900,
         "wires": [
             [
                 "628521d7.5f7cf",
@@ -59585,8 +59470,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2900,
-        "y": 3650,
+        "x": 2870,
+        "y": 3910,
         "wires": [
             [
                 "628521d7.5f7cf",
@@ -59616,8 +59501,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 2750,
-        "y": 3430,
+        "x": 2720,
+        "y": 3690,
         "wires": [
             [
                 "62b54556.f80694",
@@ -59648,8 +59533,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2890,
-        "y": 3440,
+        "x": 2860,
+        "y": 3700,
         "wires": [
             [
                 "df3cfb7a.40f0c",
@@ -59667,8 +59552,8 @@
         "links": [
             "ad87cee4.7dbb5"
         ],
-        "x": 1905,
-        "y": 3850,
+        "x": 1875,
+        "y": 4110,
         "wires": [
             [
                 "e87d903c.fade3"
@@ -60475,7 +60360,11 @@
             "b88575ca75fdb4f5",
             "36c70d85dac8cd26",
             "97b2eb182dd8a393",
-            "4d36e0c084ccff5d"
+            "4d36e0c084ccff5d",
+            "92a9eee93932c23a",
+            "c1cd44132e62f3ae",
+            "031bebed30084501",
+            "700dc73e2dd44c97"
         ],
         "x": 381,
         "y": 80,
@@ -65562,7 +65451,11 @@
             "b88575ca75fdb4f5",
             "36c70d85dac8cd26",
             "97b2eb182dd8a393",
-            "4d36e0c084ccff5d"
+            "4d36e0c084ccff5d",
+            "92a9eee93932c23a",
+            "c1cd44132e62f3ae",
+            "031bebed30084501",
+            "700dc73e2dd44c97"
         ],
         "x": 1425,
         "y": 110,
@@ -73527,8 +73420,8 @@
         "links": [
             "fe35e94081db06b3"
         ],
-        "x": 235,
-        "y": 3390,
+        "x": 195,
+        "y": 3630,
         "wires": []
     },
     {
@@ -73540,8 +73433,535 @@
         "links": [
             "fe35e94081db06b3"
         ],
-        "x": 835,
-        "y": 3310,
+        "x": 795,
+        "y": 3550,
+        "wires": []
+    },
+    {
+        "id": "1651641fc9718681",
+        "type": "ui_dropdown",
+        "z": "7a89175c.90f6a8",
+        "g": "76d03353.299b94",
+        "name": "",
+        "label": "Función",
+        "tooltip": "",
+        "place": "--",
+        "group": "9457c46f.d710c8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Start",
+                "value": "Start",
+                "type": "str"
+            },
+            {
+                "label": "Stop",
+                "value": "Stop",
+                "type": "str"
+            },
+            {
+                "label": "Reset",
+                "value": "Reset",
+                "type": "str"
+            },
+            {
+                "label": "Stop ESD",
+                "value": "Stop ESD",
+                "type": "str"
+            },
+            {
+                "label": "Disparo alto nivel de aceite SUT",
+                "value": "Disparo alto nivel de aceite SUT",
+                "type": "str"
+            },
+            {
+                "label": "Disparo alta temperatura SUT",
+                "value": "Disparo alta temperatura SUT",
+                "type": "str"
+            },
+            {
+                "label": "Alarma alta temperatura SUT",
+                "value": "Alarma alta temperatura SUT",
+                "type": "str"
+            },
+            {
+                "label": "Alarma bajo nivel de aceite SUT",
+                "value": "Alarma bajo nivel de aceite SUT",
+                "type": "str"
+            },
+            {
+                "label": "Disparo bajo bajo nivel de aceite SUT",
+                "value": "Disparo bajo bajo nivel de aceite SUT",
+                "type": "str"
+            },
+            {
+                "label": "Disparo Valvula sobrepresión SUT",
+                "value": "Disparo válvula sobre-presión SUT",
+                "type": "str"
+            },
+            {
+                "label": "Alarma DPS",
+                "value": "Alarma DPS",
+                "type": "str"
+            },
+            {
+                "label": "Disparo alta temperatura filtros",
+                "value": "Disparo alta temperatura filtros",
+                "type": "str"
+            },
+            {
+                "label": "Disparo alta presión THP",
+                "value": "Disparo alta presión THP",
+                "type": "str"
+            },
+            {
+                "label": "Disparo sobre tensión SUT",
+                "value": "Disparo sobre-tensión SUT",
+                "type": "str"
+            },
+            {
+                "label": "ESD Remoto",
+                "value": "ESD Remoto",
+                "type": "str"
+            },
+            {
+                "label": "Disparo puerta abierta",
+                "value": "Disparo puerta abierta",
+                "type": "str"
+            },
+            {
+                "label": "Protección térmica de motor",
+                "value": "Protección térmica de motor",
+                "type": "str"
+            },
+            {
+                "label": "Monitoreo",
+                "value": "Monitoreo",
+                "type": "str"
+            },
+            {
+                "label": "Disparo shutdown SCC",
+                "value": "Disparo shutdown SCC",
+                "type": "str"
+            },
+            {
+                "label": "Disparo baja presión en la troncal",
+                "value": "Disparo baja presión en la troncal",
+                "type": "str"
+            },
+            {
+                "label": "Disparo bajo bajo nivel de aceite SDT",
+                "value": "Disparo bajo bajo nivel de aceite SDT",
+                "type": "str"
+            },
+            {
+                "label": "Disparo alta temperatura SDT",
+                "value": "Disparo alta temperatura SDT",
+                "type": "str"
+            },
+            {
+                "label": "Disparo Valvula sobrepresión SDT",
+                "value": "Disparo Valvula sobrepresión SDT",
+                "type": "str"
+            },
+            {
+                "label": "Estado motorizado SDT",
+                "value": "Estado motorizado SDT",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "x": 720,
+        "y": 800,
+        "wires": [
+            [
+                "cb3f9a14.d22ae"
+            ]
+        ]
+    },
+    {
+        "id": "c0110b06537018a7",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "Estado motorizado SDT",
+        "func": "global.set(\"IO.Functions.DI['Estado motorizado SDT']\", msg.payload, 'memoryOnly');\n\nmsg.payload == true ? node.status({ fill: \"green\", shape: \"dot\", text: \"TRUE\" }) : node.status({ fill: \"red\", shape: \"dot\", text: \"FALSE\" });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1110,
+        "y": 2620,
+        "wires": [
+            [
+                "5264843c3f8a5bfa"
+            ]
+        ]
+    },
+    {
+        "id": "5264843c3f8a5bfa",
+        "type": "rbe",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1370,
+        "y": 2620,
+        "wires": [
+            [
+                "e45a597040e5b6b4"
+            ]
+        ]
+    },
+    {
+        "id": "e45a597040e5b6b4",
+        "type": "switch",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "True",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1490,
+        "y": 2620,
+        "wires": [
+            [
+                "298da47654400d29"
+            ]
+        ]
+    },
+    {
+        "id": "298da47654400d29",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "Evento",
+        "func": "msg.payload = \"Estado motorizado SDT\";\nmsg.topic = \"SDT\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1610,
+        "y": 2620,
+        "wires": [
+            [
+                "92a9eee93932c23a"
+            ]
+        ]
+    },
+    {
+        "id": "92a9eee93932c23a",
+        "type": "link out",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "",
+        "links": [
+            "2da816b7.b2be9a",
+            "cbbbcd1c.7180e"
+        ],
+        "x": 1695,
+        "y": 2620,
+        "wires": []
+    },
+    {
+        "id": "0cf78c0b09d6273c",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "Disparo Valvula sobrepresión SDT",
+        "func": "global.set(\"IO.Functions.DI['Disparo Valvula sobrepresión SDT']\", msg.payload, 'memoryOnly');\n\nmsg.payload == true ? node.status({ fill: \"green\", shape: \"dot\", text: \"TRUE\" }) : node.status({ fill: \"red\", shape: \"dot\", text: \"FALSE\" });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1140,
+        "y": 2660,
+        "wires": [
+            [
+                "3e79f87c0d2da049"
+            ]
+        ]
+    },
+    {
+        "id": "3e79f87c0d2da049",
+        "type": "rbe",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1370,
+        "y": 2660,
+        "wires": [
+            [
+                "512acf9bc58ddbb5"
+            ]
+        ]
+    },
+    {
+        "id": "512acf9bc58ddbb5",
+        "type": "switch",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "True",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1490,
+        "y": 2660,
+        "wires": [
+            [
+                "d5b99c7adfc9d65e"
+            ]
+        ]
+    },
+    {
+        "id": "d5b99c7adfc9d65e",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "Evento",
+        "func": "msg.payload = \"Disparo Valvula sobrepresión SDT\";\nmsg.topic = \"SDT\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1610,
+        "y": 2660,
+        "wires": [
+            [
+                "c1cd44132e62f3ae"
+            ]
+        ]
+    },
+    {
+        "id": "c1cd44132e62f3ae",
+        "type": "link out",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "",
+        "links": [
+            "2da816b7.b2be9a",
+            "cbbbcd1c.7180e"
+        ],
+        "x": 1695,
+        "y": 2660,
+        "wires": []
+    },
+    {
+        "id": "a60416d83c098a93",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "Disparo alta temperatura SDT",
+        "func": "global.set(\"IO.Functions.DI['Disparo alta temperatura SDT']\", msg.payload, 'memoryOnly');\n\nmsg.payload == true ? node.status({ fill: \"green\", shape: \"dot\", text: \"TRUE\" }) : node.status({ fill: \"red\", shape: \"dot\", text: \"FALSE\" });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1120,
+        "y": 2700,
+        "wires": [
+            [
+                "ff82b9d2f4f86cd2"
+            ]
+        ]
+    },
+    {
+        "id": "ff82b9d2f4f86cd2",
+        "type": "rbe",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1370,
+        "y": 2700,
+        "wires": [
+            [
+                "5ccbdf52031b91f9"
+            ]
+        ]
+    },
+    {
+        "id": "5ccbdf52031b91f9",
+        "type": "switch",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "True",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1490,
+        "y": 2700,
+        "wires": [
+            [
+                "14bbad2823dcf8cc"
+            ]
+        ]
+    },
+    {
+        "id": "14bbad2823dcf8cc",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "Evento",
+        "func": "msg.payload = \"Disparo alta temperatura SDT\";\nmsg.topic = \"SDT\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1610,
+        "y": 2700,
+        "wires": [
+            [
+                "031bebed30084501"
+            ]
+        ]
+    },
+    {
+        "id": "031bebed30084501",
+        "type": "link out",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "",
+        "links": [
+            "2da816b7.b2be9a",
+            "cbbbcd1c.7180e"
+        ],
+        "x": 1695,
+        "y": 2700,
+        "wires": []
+    },
+    {
+        "id": "8dfedc46a2445f9f",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "Disparo bajo bajo nivel de aceite SDT",
+        "func": "global.set(\"IO.Functions.DI['Disparo bajo bajo nivel de aceite SDT']\", msg.payload, 'memoryOnly');\n\nmsg.payload == true ? node.status({ fill: \"green\", shape: \"dot\", text: \"TRUE\" }) : node.status({ fill: \"red\", shape: \"dot\", text: \"FALSE\" });\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1140,
+        "y": 2740,
+        "wires": [
+            [
+                "de709a4113b94499"
+            ]
+        ]
+    },
+    {
+        "id": "de709a4113b94499",
+        "type": "rbe",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1370,
+        "y": 2740,
+        "wires": [
+            [
+                "b055cc7987e106cf"
+            ]
+        ]
+    },
+    {
+        "id": "b055cc7987e106cf",
+        "type": "switch",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "True",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1490,
+        "y": 2740,
+        "wires": [
+            [
+                "d2c4820f2156edde"
+            ]
+        ]
+    },
+    {
+        "id": "d2c4820f2156edde",
+        "type": "function",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "Evento",
+        "func": "msg.payload = \"Disparo bajo bajo nivel de aceite SDT\";\nmsg.topic = \"SDT\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1610,
+        "y": 2740,
+        "wires": [
+            [
+                "700dc73e2dd44c97"
+            ]
+        ]
+    },
+    {
+        "id": "700dc73e2dd44c97",
+        "type": "link out",
+        "z": "7a89175c.90f6a8",
+        "g": "49c39e.d1336c64",
+        "name": "",
+        "links": [
+            "2da816b7.b2be9a",
+            "cbbbcd1c.7180e"
+        ],
+        "x": 1695,
+        "y": 2740,
         "wires": []
     }
 ]
